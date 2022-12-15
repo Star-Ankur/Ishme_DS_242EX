@@ -19,7 +19,7 @@ We are given three files in the dataset (present in this repository in 'data' fo
 
 ### Instruction for running the code:
 
-Download the files in the data folder from my repository. You need to make a small change in the above script before running it.
+Download the files in the data folder from my repository. You need to make a small change in the Predict.ipynb script before running it.
 
 ```
 df = pd.read_parquet('/content/drive/MyDrive/Data/BMTC.parquet.gzip', engine='pyarrow') 
