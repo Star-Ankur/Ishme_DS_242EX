@@ -17,9 +17,18 @@ We are given three files in the dataset (present in this repository in 'data' fo
 
 **GroundTruth.csv:** It contains the ground truth travel times between the source-destination pairs provided in Input.csv. 
 
-### Instruction to running the code
-Put the path locations in the code to the path location in which the data is stored
+### Instruction for running the code:
+
+Download the files in the data folder from my repository. You need to make a small change in the above script before running it.
+
+```
+df = pd.read_parquet('/content/drive/MyDrive/Data/BMTC.parquet.gzip', engine='pyarrow') 
+dfInput = pd.read_csv('/content/drive/MyDrive/Data/Input.csv')
+dfGroundTruth = pd.read_csv('/content/drive/MyDrive/Data/GroundTruth.csv')
+```
+
+
+In the above lines of code , you need to change the  path  to path where you have downloaded the the files of data folder.
+                                                                     
 ### Approach used
-As the given data is time series it is shifted by p=1 and  used to calculate haversine distance using consecutive longitude and latitude.
-Duration between this locations is calculated using timestamp.
-This data is used to train Linear regressor and Random forest model.
+[Click to view the approach we used in detail.](https://docs.google.com/document/d/1yuy11cfP6FC4a8llFTEoOpWIL79jCH24e_oZ80vzVcU/edit?usp=sharing)
